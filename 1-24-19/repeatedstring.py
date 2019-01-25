@@ -2,7 +2,6 @@ import math
 
 def repeatedString(s,n):
     remainder = n % len(s)
-    print(remainder)
     dividedNumber = math.floor(n/len(s))
     count = 0
     countRemainder = 0
@@ -13,7 +12,6 @@ def repeatedString(s,n):
         if s[i] == 'a':
             countRemainder += 1
     totalCount = (count * dividedNumber) + countRemainder
-    print(count,dividedNumber,countRemainder)
     print(totalCount)
 
 string = 'aba'
