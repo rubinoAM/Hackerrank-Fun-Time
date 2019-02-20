@@ -6,7 +6,6 @@ function twoStrings(s1,s2){
 
     for(let i=0; i < alphabet.length; i++){
         let regEx = new RegExp(`[${alphabet[i]}]+`);
-        let match1 = regEx.test(s1);
         if(regEx.test(s1) && regEx.test(s2)){
             console.log("YES");
             count++;
