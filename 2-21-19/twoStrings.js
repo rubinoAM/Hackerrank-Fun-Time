@@ -1,19 +1,20 @@
 //Return YES or NO based on whether two strings share a substring
 
 function twoStrings(s1,s2){
-    let comChar = 0;
+    let alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let count = 0;
 
-    for(let i=0; i < s1.length; i++){
-        for(let j=0; j < s2.length; j++){
-            if(s1.charAt(i) ==  s2.charAt(j)){
-                comChar++;
-            }
+    for(let i=0; i < alphabet.length; i++){
+        let regEx = new RegExp(`[${alphabet[i]}]+`);
+        let match1 = regEx.test(s1);
+        if(regEx.test(s1) && regEx.test(s2)){
+            console.log("YES");
+            count++;
+            break;
         }
     }
-
-    if(comChar > 0){
-        console.log("YES");
-    } else {
+    
+    if(count == 0){
         console.log("NO");
     }
 }
