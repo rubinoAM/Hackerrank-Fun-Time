@@ -7,31 +7,31 @@ const testArr2 = [4,3,1,2];
 
 function swap(arr){
     let unordered = true;
+    let unsortedArr = arr;
     let sortedArr = arr.sort();
+    console.log(unsortedArr);console.log(sortedArr);
     let moveCount = 0;
 
-    // If [i] > [i+x], move to next 
-
     while(unordered){
-        for(let i=0; i<arr.length; i++){
+        for(let i=0; i<unsortedArr.length; i++){
             for(let j=0; j<sortedArr.length; j++){
-                if(arr[i] == sortedArr[j]){
-                    let stashedFirst = arr[i];
-                    let stashedSecond= arr[j]
-                    arr[i] = stashedSecond;
-                    arr[j] = stashedFirst;
+                if(unsortedArr[i] == sortedArr[j]){
+                    let stashedFirst = unsortedArr[i];
+                    let stashedSecond= unsortedArr[j]
+                    unsortedArr[i] = stashedSecond;
+                    unsortedArr[j] = stashedFirst;
                     moveCount++;
-                    console.log(moveCount);
+                    //console.log(moveCount);
                 }
             }
         }
 
-        if(arr == sortedArr){
+        if(unsortedArr == sortedArr){
             unordered = false;
             console.log(moveCount);
         }
     }
 }
 
-//swap(testArr);
+swap(testArr);
 swap(testArr2);
