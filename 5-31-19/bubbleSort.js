@@ -13,5 +13,5 @@ function countSwaps(a){
     console.log(count,a[0],a[a.length-1]);
 }
 
-const arr = [3,1,0.5];
+const arr = [3,1,7];
 countSwaps(arr);
