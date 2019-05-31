@@ -1,18 +1,13 @@
 function alternatingCharacters(s){
-    let newStr = "";
-    for(let i=0;i<s.length-1;i++){
-        if(s.charAt(i) === s.charAt(i+1)){
-            //console.log(s.charAt(i));
-            newStr += s.substr(i,1);
-            // let oldChar = s.charAt(i);
-            // s.replace(oldChar,"");
+    let a = s.split('');
+    console.log(a);
+    for(let i=0;i<a.length-1;i++){
+        if(a[i] === a[i+1]){
+            a.splice(i,1);
+            console.log(a);
         }
     }
-    if(newStr.length === 0){
-        console.log(s);
-    } else {
-        console.log(newStr);
-    }
+    console.log(a);
 }
 
 const strings = ['AAAA','BBBBB','ABABABAB',"BABABA","AAABBB"];
